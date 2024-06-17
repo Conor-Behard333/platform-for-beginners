@@ -1,6 +1,5 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
-
 class CustomHandler(BaseHTTPRequestHandler):
 
     # When a get request is sent to http://localhost:8080 this function runs
@@ -18,7 +17,6 @@ class CustomHandler(BaseHTTPRequestHandler):
         self.send_response(200)
         
         self.wfile.write(html_content)
-
 
 def run(port=8080):
     # Create the server class
