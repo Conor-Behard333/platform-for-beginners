@@ -1,6 +1,7 @@
-from http.server import BaseHTTPRequestHandler, HTTPServer
+import http.server
+import socketserver
 
-class CustomHandler(BaseHTTPRequestHandler):
+class CustomHandler(http.server.BaseHTTPRequestHandler):
 
     # When a get request is sent to http://localhost:8080 this function runs
     def do_GET(self):
@@ -27,17 +28,14 @@ class CustomHandler(BaseHTTPRequestHandler):
 def run():
     port = 8080
 
-    # Create the server class
-    server_class=HTTPServer
-
     # Create the custom handler_class (a handler is a block of code that gets triggered when a certain event or request happens)
-    handler_class=CustomHandler
+    handler=CustomHandler
 
     # set the server address with the port number
     server_address = ('', port)
 
     # Create the http process
-    httpd = server_class(server_address, handler_class)
+    httpd = socketserver.TCPServer(("", port), handler)
 
     # Tell the user which port the server is running on
     print(f'Server running on port {port}. Go to http://localhost:{port}')
