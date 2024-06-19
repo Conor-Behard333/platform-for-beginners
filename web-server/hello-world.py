@@ -42,7 +42,7 @@ def run():
     server_address = ('', port)
 
     # Create the http process
-    httpd = socketserver.TCPServer(("", port), handler)
+    httpd = socketserver.TCPServer(server_address, handler)
 
     # Tell the user which port the server is running on
     print(f'Server running on port {port}. Go to http://localhost:{port}')
