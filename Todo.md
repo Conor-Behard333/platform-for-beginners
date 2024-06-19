@@ -29,7 +29,7 @@
 - make a basic web server in python (hint: https://reintech.io/blog/how-to-create-a-simple-web-server-with-python)
 
 - add more advanced features to web server code (index.html, different routes)
-- 
+    - https://medium.com/@andrewklatzke/creating-a-python3-webserver-from-the-ground-up-4ff8933ecb96
 
 - containerise web-server
     - why containerise? (solves "but it works on my computer" problem, ensures it's repeatable, more portable, etc.) (https://medium.com/@stefan.paladuta17/introduction-to-containerization-a-beginners-walkthrough-f5dc2508e16f)
